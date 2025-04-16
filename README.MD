@@ -68,6 +68,7 @@ pip install -r requirements.txt
 
 
 🌐 Frontend Setup
+
 Navigate to the frontend directory:
 
 bash
