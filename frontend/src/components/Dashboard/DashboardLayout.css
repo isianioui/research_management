@@ -1,0 +1,657 @@
+/* DashboardLayout.css */
+/* .dashboard-container {
+  min-height: 100vh;
+  background-color: #111827;
+  color: white;
+} */
+
+/* .fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #111827;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: 64px;
+  z-index: 1030;
+  padding: 0 20px; /* Add padding for better spacing 
+} */
+
+/* .sidebar {
+  position: fixed;
+  top: 64px; /* Align below the topbar */
+  /* left: -256px;
+  width: 256px; */
+  /* height: calc(100vh - 52px);  Adjust height to account for topbar  */
+  /* background-color: #1f2937;
+  transition: left 0.3s ease;
+  z-index: 1020;
+  overflow-y: auto; */
+ 
+
+/* .sidebar.show {
+  left: 0;
+} */
+
+/* .main-content {
+  padding: 20px;
+  margin-top: 64px; /* Add margin to avoid overlapping with topbar 
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}*/
+
+/* .main-content.with-sidebar {
+  margin-left: 256px; /* Add margin to avoid overlapping with sidebar */
+
+
+/* Custom scrollbar for sidebar */
+/* .sidebar::-webkit-scrollbar {
+  width: 6px;
+} */
+
+/* .sidebar::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 3px;
+} */
+
+/* Responsive adjustments */
+/* @media (max-width: 768px) {
+  .main-content.with-sidebar {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    width: 240px;
+  }
+} */
+
+
+/* DashboardLayout.css */
+.dashboard-container {
+  min-height: 100vh;
+  background-color: #111827;
+  color: white;
+  display: flex;
+}
+
+.main-wrapper {
+  flex: 1;
+  min-height: 100vh;
+  margin-left: 272px; 
+  transition: margin-left 0.3s ease;
+  width: calc(100% - 272px);
+  background: linear-gradient(to bottom, #0F172A, #1E293B);
+}
+
+.main-wrapper.sidebar-hidden {
+  margin-left: 0;
+  width: 100%;
+}
+
+.fixed-top {
+  height: 64px;
+  background-color: #111827;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 16px;
+  width: 240px;
+  height: calc(100vh - 66px);
+  /* background-color: #246ed6; */
+  transition: transform 0.3s ease;
+  z-index: 1020;
+  overflow-y: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: none;
+  transform: translateX(-280px);
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}
+
+.main-content {
+  margin-top: 49px;
+  padding: 20px;
+}
+
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 3px;
+}
+
+
+@media (max-width: 768px) {
+  .main-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Add smooth transitions */
+.feature-card {
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Add card animations */
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid > div {
+  animation: cardAppear 0.3s ease forwards;
+}
+
+.grid > div:nth-child(1) { animation-delay: 0.1s; }
+.grid > div:nth-child(2) { animation-delay: 0.2s; }
+.grid > div:nth-child(3) { animation-delay: 0.3s; }
+.grid > div:nth-child(4) { animation-delay: 0.4s; }
+.grid > div:nth-child(5) { animation-delay: 0.5s; }
+.grid > div:nth-child(6) { animation-delay: 0.6s; }
+
+/* Enhanced scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .main-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Add these new styles */
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+/* Custom scrollbar for horizontal scroll */
+.overflow-x-auto {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+  height: 6px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+/* Card hover effects */
+.feature-card {
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1280px) {
+  .w-400 {
+    width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .w-400 {
+    width: 300px;
+  }
+  
+  .flex-col {
+    padding: 0 1rem;
+  }
+}
+
+/* Card Layout Styles */
+.flex-none {
+  flex: none;
+  width: 100%;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  padding-bottom: 1rem;
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+  height: 6px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+/* Card Styles */
+.w-\[400px\] {
+  width: 400px;
+  min-width: 400px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1536px) {
+  .w-\[400px\] {
+    width: 350px;
+    min-width: 350px;
+  }
+}
+@media (max-width: 1280px) {
+  .w-\[400px\] {
+    width: 300px;
+    min-width: 300px;
+  }
+}
+
+/* Card Animation */
+.feature-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid Layout */
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem; /* 32px gap */
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.feature-card-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 200px; /* Ensure minimum height */
+}
+
+/* Card styles */
+.feature-card {
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styles */
+.bg-opacity-10 {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bg-opacity-20 {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1280px) {
+  .grid-cols-2 {
+    gap: 1.5rem; /* 24px gap for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem; /* 16px gap for mobile */
+  }
+}
+
+/* Task and Project Cards */
+.bg-1f2937 {
+  background-color: #1a1f2e;
+  border-radius: 12px;
+}
+
+/* Task list item */
+.task-item {
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  background-color: #242938;
+  transition: background-color 0.2s ease;
+}
+
+.task-item:hover {
+  background-color: #2d3343;
+}
+
+/* Checkbox styles */
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #4B5563;
+  border-radius: 50%;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  margin-right: 12px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #3B82F6;
+  border-color: #3B82F6;
+}
+
+/* Tab styles */
+.tab-button {
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.tab-button.active {
+  background-color: #2d3343;
+  color: white;
+}
+
+.tab-button:not(.active) {
+  color: #9CA3AF;
+}
+
+.tab-button:hover:not(.active) {
+  background-color: #242938;
+}
+
+/* Project styles */
+.project-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: #242938;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+.project-item:hover {
+  background-color: #2d3343;
+}
+
+.project-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #99F6E4;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+/* Create buttons */
+.create-button {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  color: #9CA3AF;
+  border: 2px dashed #4B5563;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  margin: 16px 0;
+}
+
+.create-button:hover {
+  color: white;
+  border-color: #6B7280;
+}
+
+/* Text styles */
+.task-title {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.task-project {
+  color: #9CA3AF;
+  font-size: 12px;
+}
+
+.task-date {
+  color: #9CA3AF;
+  font-size: 12px;
+}
+
+/* Card headers */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Project badge */
+.project-badge {
+  background-color: #86efac;
+  color: #064e3b;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Card backgrounds */
+.bg-card {
+  background-color: #1e1f21;
+}
+
+/* Tab styles */
+.tab-button {
+  padding: 8px 16px;
+  color: #9ca3af;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.tab-button.tab-active {
+  color: white;
+  border-bottom-color: white;
+}
+
+/* Create buttons */
+.create-task-button {
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+  font-size: 14px;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.create-task-button:hover {
+  color: white;
+  background-color: #2c2d30;
+}
+
+.create-project-button {
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: 2px dashed #4b5563;
+  border-radius: 6px;
+}
+
+.create-project-button:hover {
+  color: white;
+  border-color: #6b7280;
+}
+
+/* Task items */
+.task-item {
+  padding: 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.task-item:hover {
+  background-color: #2c2d30;
+}
+
+/* Checkbox styles */
+.checkbox-wrapper {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.task-checkbox {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #4b5563;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.task-checkbox:checked {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+/* Project tag */
+.project-tag {
+  padding: 2px 6px;
+  background-color: #86efac;
+  color: #064e3b;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Project items */
+.project-item {
+  padding: 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.project-item:hover {
+  background-color: #2c2d30;
+}
+
+.project-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #86efac;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #064e3b;
+  font-weight: 600;
+}
+
+/* Border styles */
+.border-gray-700 {
+  border-color: #374151;
+}
+
+/* Spacing utilities */
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+/* Text styles */
+.text-gray-400 {
+  color: #9ca3af;
+}
+
+.font-medium {
+  font-weight: 500;
+}

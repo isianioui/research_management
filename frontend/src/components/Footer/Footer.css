@@ -1,0 +1,91 @@
+/* Footer.css */
+
+/* Footer Styling */
+footer {
+    background-color: #343a40; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px 0; /* Reduced padding */
+  }
+  
+  footer h5 {
+    font-weight: bold;
+    margin-bottom: 15px; /* Reduced margin */
+  }
+  
+  footer ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  footer ul li a {
+    color: #fff; /* White text for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  footer ul li a:hover {
+    color: #007bff; /* Blue text on hover */
+  }
+  
+  /* Website Logo, Name, and Slogan */
+  .footer-logo {
+    width: 50px; /* Adjust logo size */
+    height: auto;
+  }
+  
+  /* Quick Links (Logos) */
+  .quick-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between logos */
+  }
+  
+  .quick-links a {
+    color: #fff; /* White icons */
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .quick-links a:hover {
+    color: #007bff; /* Blue icons on hover */
+    transform: translateY(-5px); /* Lift icons on hover */
+  }
+  
+  /* Social Media Icons */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+  }
+  
+  .social-icons a {
+    color: #fff; /* White icons */
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff; /* Blue icons on hover */
+    transform: translateY(-5px); /* Lift icons on hover */
+  }
+  
+  /* Contact Button */
+  .contact-button {
+    margin-top: 15px; /* Reduced margin */
+  }
+  
+  /* Horizontal Line */
+  hr {
+    border-color: rgba(255, 255, 255, 0.1); /* Light border color */
+  }
+  
+  /* Copyright Text */
+  footer p {
+    margin-top: 15px; /* Reduced margin */
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7); /* Light gray text */
+  }

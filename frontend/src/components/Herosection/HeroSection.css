@@ -1,0 +1,103 @@
+/* Hero Section Styling */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #cec9ba, #7d7461);
+    color: #fff;
+    padding: 80px 0 60px 0; /* Add space at the top */
+    /* margin-top: 20px; */
+}
+
+/* Text content styling */
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #232323;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/* Button Styling */
+.hero-section .btn-light {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .btn-outline-light {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Image container */
+
+.hero-section .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative; /* Ensure the image is positioned */
+    z-index: 2;
+}
+
+/* Image overlay */
+.hero-section .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(97, 198, 147, 0.6), rgba(84, 127, 202, 0.6));
+    mix-blend-mode: multiply;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .hero-section .btn-light,
+    .hero-section .btn-outline-light {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

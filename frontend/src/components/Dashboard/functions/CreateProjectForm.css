@@ -1,0 +1,198 @@
+/* CreateProjectForm.css */
+.create-project-container {
+    background-color: #f4f7fa;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    max-width: 500px;
+    width: 100%;
+    padding: 40px;
+    margin: 0 auto;
+  }
+  
+  .create-project-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .create-project-title {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .methodology-badge {
+    background-color: #3498db;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #34495e;
+    font-weight: 500;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  }
+  
+  .date-picker-container {
+    position: relative;
+  }
+  
+  .react-datepicker-wrapper {
+    width: 100%;
+  }
+  
+  .react-datepicker__input-container input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .google-calendar-integration {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .google-calendar-title {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .google-calendar-title svg {
+    margin-right: 10px;
+    color: #db4437;
+  }
+  
+  .google-calendar-connect-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .google-calendar-connect-btn:hover {
+    background-color: #357ae8;
+  }
+  
+  .google-calendar-connected {
+    color: #2ecc71;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .btn-create {
+    flex: 1;
+    padding: 12px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-create:hover {
+    background-color: #27ae60;
+  }
+  
+  .btn-create:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  .btn-cancel {
+    flex: 1;
+    padding: 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-cancel:hover {
+    background-color: #c0392b;
+  }
+  
+  .btn-cancel:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .create-project-container {
+      padding: 20px;
+      margin: 0 10px;
+    }
+  
+    .form-actions {
+      flex-direction: column;
+    }
+  
+    .btn-create,
+    .btn-cancel {
+      width: 100%;
+    }
+  }
+  
+  /* Error and Warning Styles */
+  .error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .warning-message {
+    color: #f39c12;
+    font-size: 12px;
+    margin-top: 5px;
+  }

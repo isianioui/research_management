@@ -1,0 +1,52 @@
+/* Feature Card Styling */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #b0a990; /* White background */
+    overflow: hidden; /* Ensures content stays within the card */
+    
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Add a shadow on hover */
+  }
+  
+  /* Feature Icon Styling */
+  .feature-icon {
+    color: #007bff; /* Primary color for the icon */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+  
+  .feature-card:hover .feature-icon {
+    color: #0056b3; /* Darker color on hover */
+  }
+  
+  /* Card Title Styling */
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #242424; /* Dark text color */
+  }
+  
+  /* Card Text Styling */
+  .card-text {
+    font-size: 1rem;
+    color: #000000; /* Lighter text color */
+    line-height: 1.6; /* Improve readability */
+  }
+  
+  /* Section Styling */
+  .features {
+    background: linear-gradient(215deg,  #7d7461,#cec9ba);
+
+    padding: 80px 0; /* Add more padding for better spacing */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .feature-card {
+      margin-bottom: 20px; /* Add spacing between cards on smaller screens */
+    }
+  }

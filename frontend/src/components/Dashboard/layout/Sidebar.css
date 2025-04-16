@@ -1,0 +1,46 @@
+/* Sidebar.css */
+.sidebar {
+  position: fixed;
+  top: 16px; /* Add margin from top */
+  left: 16px; /* Add margin from left */
+  width: 240px;
+  height: calc(100vh - 32px); /* Adjust for top and bottom margins */
+  background-color: #185fc2;
+  transition: transform 0.3s ease;
+  z-index: 1020;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 12px; /* Add border radius */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  transform: translateX(-280px); /* Start off-screen */
+}
+
+.sidebar.show {
+  transform: translateX(0); /* Slide in when shown */
+}
+
+.sidebar-content {
+  padding: 16px;
+  width: 100%;
+}
+
+/* Custom scrollbar for sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 3px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 240px;
+  }
+}

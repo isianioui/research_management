@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.jpeg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+
+<meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    style-src 'self' 'unsafe-inline' https://accounts.google.com https://www.gstatic.com;
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://apis.google.com https://accounts.google.com https://www.googleapis.com https://www.gstatic.com blob: data:;
+    frame-src 'self' https://accounts.google.com https://content.googleapis.com;
+    img-src 'self' https://accounts.google.com https://www.gstatic.com https://lh3.googleusercontent.com https://avatars.githubusercontent.com http://localhost:5000 data: blob:;
+    connect-src 'self' http://localhost:5000 http://127.0.0.1:5000 https://www.googleapis.com https://accounts.google.com https://content.googleapis.com;
+    worker-src 'self' blob:;
+    child-src 'self' blob: https://accounts.google.com https://content.googleapis.com;
+    frame-ancestors 'self';
+    form-action 'self' https://accounts.google.com;
+    base-uri 'self';
+    manifest-src 'self';
+    object-src 'none'
+">
+
+    <title>Research App</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+/* Full Page Container */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg,rgb(24, 94, 59),rgb(23, 76, 167));
+}
+
+/* Box Wrapper */
+.register-box {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Left Side (Welcome Section) */
+.register-left {
+  flex: 1;
+  background: linear-gradient(135deg,rgb(24, 94, 59),rgb(23, 76, 167));
+  
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.register-left h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.register-left p {
+  font-size: 1.2rem;
+}
+
+.logo {
+  width: 80px;
+  margin-top: 20px;
+}
+
+/* Right Side (Form Section) */
+.register-right {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-right h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-weight: bold;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #1f2fd8;
+  box-shadow: 0 0 5px rgba(11, 137, 51, 0.5);
+}
+
+/* Register Button */
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg,rgb(24, 94, 59),rgb(23, 76, 167));
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+}
+
+/* Social Login */
+.social-login {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.social-login p {
+  margin-bottom: 10px;
+}
+
+/* Login Link */
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .register-box {
+    flex-direction: column;
+  }
+
+  .register-left {
+    padding: 20px;
+  }
+
+  .register-right {
+    padding: 20px;
+  }
+}
