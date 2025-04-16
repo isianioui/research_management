@@ -63,11 +63,18 @@ A comprehensive web application designed to help researchers, PhD students, and 
    ```
 2. Create a virtual environment and install dependencies:
    ```bash
- cd backend
+
+   
+cd backend
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
 pip install -r requirements.txt
+   ```
+   
+
+
+
 
 ### frontend Setup
 Navigate to the frontend directory:
